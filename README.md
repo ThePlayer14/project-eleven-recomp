@@ -26,12 +26,17 @@ If you want to build from source you'll need:
 * You'll need to use a controller.
 
 ## Troubleshooting
-* If you see something like 
+* If you see something like
+  
 ```[critical] [core] [t550982] [FATAL] Call to invalid or unregistered function at guest address 0xADDRESS``` 
+
 in the log (at `compiled program/logs/program_001.log`), take note of the address in question, then in `program_manifest.toml`, go to 
-```[entrypoint.functions]
+
+```
+[entrypoint.functions]
 0xADDRESS = {}
 ```
+
 Specify the address in here, and if you don't specify an end or a size, the codegen process will map it out.
 
 * `[warning] [krnl] [t521854] [NtCreateFile] FAILED: path='D:\data\system.dat' -> 0xc000000f` -> see [this article](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55) for explanations
