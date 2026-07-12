@@ -14,7 +14,7 @@ If you want to build from source you'll need:
 ## Setup
 * Get the `Nightly 0.8.1.68-dev.g8dadea6` or newer release of the ReXGlue SDK.
 * Put your your own legally owned game's XEX file into `extracted`.
-* Copy the path to `rexglue` or `rexglue.exe` from the downloaded SDK, then in the downloaded `project-eleven` archive, run `rexglue --verbose --log-file ../logs/recomp.log codegen`
+* Copy the path to `rexglue` or `rexglue.exe` from the downloaded SDK, then in the downloaded and *extracted* `project-eleven` archive, run `rexglue --verbose --log-file ../logs/recomp.log codegen`
 * After codegen is successful, run `cmake --preset linux-amd64-relwithdebinfo -DCMAKE_PREFIX_PATH=/path/to/rexglue-sdk` to configure (be sure to select your platform), if not sure, check `CMakePresets.json`)
 * Build the code with `cmake --build out/build/linux-amd64-relwithdebinfo` (Again, be sure to select your platform)
 * The compiled executable will be inside `out/build/linux-amd64-relwithdebinfo` (or what your platform was). Note that you still need to copy over `librexruntimerd.so`, `librexruntimerd.so`, `libTracyClientrd.so` on Linux if you don't compile using `cmake --build . --target project_eleven_codegen`.
