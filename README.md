@@ -43,7 +43,7 @@ You will need to copy over the dependency libraries from `linux-amd64/lib` (on l
 * Likely everything works that does on Xenia. Even the OP/ED videos likely work.
 * To launch, use `./project_eleven --game_data_root="extracted/" --user_data_root="userdata/" --cache_path="cache/" --gpu_plugin=xenos --no-fullscreen`.
 * Make sure to put your legally owned game files inside `extracted`.
-* You'll need to use a controller.
+* You'll need to use a controller (or launch with `--mnk_mode=true`). To sse MnK keybinds, press F4.
 
 ## Troubleshooting
 * If you see something like
