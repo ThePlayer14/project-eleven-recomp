@@ -62,6 +62,7 @@ Specify the address in here, and if you don't specify an end or a size, the code
 * `[warning] [krnl] [t521854] [NtCreateFile] FAILED: path='D:\data\system.dat' -> 0xc000000f` -> see [this article](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55) for explanations
 
 * `[warning] [fs] [t568379] VFS: 'ShaderDumpxe:\CompareBackEnds' -> [no device]` -> an insignificant "error" that doesn't affect anything, left uncommented in ReXGlue for some reason.
+* `./project_eleven: symbol lookup error: ./project_eleven: undefined symbol: _ZTVN3rex2ui21SDLWindowedAppContextE` -> Make sure you're using up-to date DLLs or `.so` files from the SDK you'"re building with.
 
 ## Legal
 
