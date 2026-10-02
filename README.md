@@ -45,6 +45,13 @@ You will need to copy over the dependency libraries from `linux-amd64/lib` (on l
 * Make sure to put your legally owned game files inside `extracted`.
 * You'll need to use a controller (or launch with `--mnk_mode=true`). To see MnK keybinds, press F4.
 
+## Updating to a newer ReXGlue version (e.g: 0.9 -> 0.10)
+Just get the new release of ReXGlue SDK, then
+* `[downloaded rexglue archive extraction folder]/linux-amd64/bin/rexglue init --project-name project-eleven --xex-path ./project-eleven/extracted/default.xex --game-root=./project-eleven/extracted --project-root ./project-eleven/`
+* `[downloaded rexglue archive extraction folder]/linux-amd64/bin/rexglue --verbose --log-file ../logs/recomp.log codegen`
+* `cmake --preset linux-amd64-relwithdebinfo -DCMAKE_PREFIX_PATH=[downloaded rexglue archive extraction folder]/linux-amd64/`
+* `cmake --build out/build/linux-amd64-relwithdebinfo`
+
 ## Troubleshooting
 * If you see something like
   
